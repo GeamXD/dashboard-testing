@@ -158,11 +158,11 @@ def plot_pie_chart(df: pd.DataFrame, xcol: str, title: str) -> None:
     Returns:
         None
     """
-    fig = px.pie(data_frame=df, names=xcol, title=title,  hole=0.6, width=800, height=500,
+    fig = px.pie(data_frame=df, names=xcol, title=title,  hole=0.6, width=500, height=500,
                  color_discrete_sequence=custom_colors)
     fig.update_traces(
     textinfo='label + percent',
-    textposition='outside',
+    textposition='inside',
     )
 
     fig.update_layout(
