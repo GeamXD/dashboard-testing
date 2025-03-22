@@ -181,8 +181,8 @@ def get_metrics_card_info(df: pd.DataFrame) -> int:
     """
     no_participants = str(df.shape[0])
     num_disease = str(df['disease status'].value_counts().values[0])
-    max_hr = str(df['max heart rate'].max())
-    num_exerc_angina = str(df['exercise angina'].value_counts().values[1])
+    max_hr = str(df[df['disease status'] == 'Yes']['max heart rate'].max())
+    num_exerc_angina = str(df[df['disease status'] == 'Yes']['exercise angina'].value_counts().iloc[0])
     return no_participants, num_disease, max_hr, num_exerc_angina
 
 
