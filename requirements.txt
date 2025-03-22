@@ -1,0 +1,6 @@
+streamlit
+plotly
+pandas
+numpy
+streamlit_shadcn_ui
+
