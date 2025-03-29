@@ -139,8 +139,8 @@ def plot_hist(df: str, xcol: str, title: str, x_title: str, bins: int = 40) -> N
                         color_discrete_sequence=custom_colors)
     fig.update_layout(
         bargap=0.01,
-        width=800,
-        height=500,
+        width=500,
+        height=300,
         yaxis_title='Frequency',
         xaxis_title=x_title,
     )
@@ -158,7 +158,7 @@ def plot_pie_chart(df: pd.DataFrame, xcol: str, title: str) -> None:
     Returns:
         None
     """
-    fig = px.pie(data_frame=df, names=xcol, title=title,  hole=0.6, width=500, height=500,
+    fig = px.pie(data_frame=df, names=xcol, title=title,  hole=0.6, width=300, height=300,
                  color_discrete_sequence=custom_colors)
     fig.update_traces(
     textinfo='label + percent',
@@ -205,8 +205,8 @@ def plot_multivar_bar(df: pd.DataFrame, xcol: str, title: str, x_title: str) -> 
                  color_discrete_sequence=custom_colors)
 
     fig.update_layout(
-        width=800,
-        height=500,
+        width=500,
+        height=300,
         xaxis_title=x_title,
     )
 
@@ -229,7 +229,7 @@ def plot_max_hr():
     color_discrete_sequence=['#F17D0A']
     )
     fig_max_heart_rate.update_layout(
-        height=1050,
+        height=650,
         width=600
     )
     return fig_max_heart_rate
