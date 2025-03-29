@@ -9,7 +9,7 @@ import streamlit_shadcn_ui as ui
 
 # Streamlit page name
 st.set_page_config(
-    page_title="Heart Disease Dashboard",
+    page_title="CVD Disease Dashboard",
     page_icon=":heart:",
     layout="wide",
     # initial_sidebar_state="expanded"
@@ -273,7 +273,7 @@ chole_by_disease_status = plot_multivar_bar(df, 'cholesterol group', 'Cholestero
 
 
 # Dashboard title
-st.markdown("<h1 style='text-align: center;'>Heart Disease Prediction Dashboard ♥️</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>CVD Disease Prediction Dashboard ♥️</h1>", unsafe_allow_html=True)
 st.write("") # White space
 
 # Metrics cards
